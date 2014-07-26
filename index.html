@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>jQuery DateSelect</title>
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.1.1/css/bootstrap.min.css">
+	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/jquery.dateselect.css">
+	<style>
+		.date-select { font-family: 'Open Sans', sans-serif; }
+	</style>
+</head>
+<body>
+	<div class="container">
+		<h2>jQuery DateSelect</h2>
+		<p>There are a lot of date pickers out there, but why have an old and boring calendar when you can have a modern and slick date selector?</p>
+		<p>Meet DateSelect, a new way to select dates on your forms.</p>
+		<h2>Installing</h2>
+		<p>Just grab the JS and CSS files, include them on your HTML file and you're set.</p>
+		<pre>&lt;link rel=&quot;stylesheet&quot; href=&quot;css/jquery.dateselect.css&quot;&gt;</pre>
+		<pre>&lt;script type=&quot;text/javascript&quot; src=&quot;js/jquery.dateselect.js&quot;&gt;&lt;/script&gt;</pre>
+		<h2>Basic usage</h2>
+		<p>This awesome plugin has two operation modes: <strong>automatic</strong> or <strong>manual</strong>.</p>
+		<!-- Auto mode -->
+		<h3 for="">Automatic mode</h3>
+		<p>In automatic mode you'll just have to add a <code>data-*</code> attribute and the plugin will do all thee work (but for this to work, you must have also a valid HTML 5 DOCTYPE).</p>
+		<p>If you can't (or don't want to) add a DOCTYPE you can still use the good old <code>$('#input').dateSelect()</code> to bind your input fields.</p>
+		<p><strong>HTML</strong></p>
+		<pre>&lt;input type=&quot;text&quot; name=&quot;date1&quot; id=&quot;date1&quot; class=&quot;form-control&quot; data-select=&quot;date&quot;&gt;
+&lt;span class=&quot;input-group-btn&quot;&gt;
+	&lt;button class=&quot;btn btn-primary&quot; type=&quot;button&quot; data-toggle=&quot;select&quot;&gt;&lt;i class=&quot;fa fa-calendar&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+&lt;/span&gt;</pre>
+		<p><strong>Result</strong></p>
+		<div class="well">
+			<div class="row">
+				<div class="col-md-3">
+					<div class="input-group">
+						<input type="text" name="date1" id="date1" class="form-control" data-select="date">
+						<span class="input-group-btn">
+							<button class="btn btn-primary" type="button" data-toggle="select"><i class="fa fa-calendar"></i></button>
+						</span>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Manual mode -->
+		<h3 for="">Manual mode</h3>
+		<p>In manual mode, you'll have to call the <code>$.dateSelect.show()</code> method to open the date picker.</p>
+		<p><strong>HTML</strong></p>
+		<pre>&lt;input type=&quot;text&quot; name=&quot;date2&quot; id=&quot;date2&quot; class=&quot;form-control&quot;&gt;
+&lt;span class=&quot;input-group-btn&quot;&gt;
+	&lt;button class=&quot;btn btn-primary btn-date&quot; type=&quot;button&quot;&gt;&lt;i class=&quot;fa fa-calendar&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+&lt;/span&gt;</pre>
+			<p><strong>JS</strong></p>
+			<pre>$('.btn-date').on('click', function(e) {
+	e.preventDefault();
+	$.dateSelect.show({
+		element: 'input[name=&quot;date2&quot;]'
+	});
+});</pre>
+		<p><strong>Result</strong></p>
+		<div class="well">
+			<div class="row">
+				<div class="col-md-3">
+					<div class="input-group">
+						<input type="text" name="date2" id="date2" class="form-control">
+						<span class="input-group-btn">
+							<button class="btn btn-primary btn-date" type="button"><i class="fa fa-calendar"></i></button>
+						</span>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--  -->
+		<h3>It's customizable</h3>
+		<p>You may use the included stylesheet or style it to fit your page design. It's up to you!</p>
+		<h3>And it works with your mouse wheel too!</h3>
+		<p>Just include the <a href="https://github.com/brandonaaron/jquery-mousewheel">jQuery MouseWheel plugin</a> and it will automagically make it work.</p>
+		<h3>So what do you need?</h3>
+		<ul>
+			<li><a href="http://jquery.com/">jQuery</a> 1.8+</li>
+			<li><a href="https://github.com/brandonaaron/jquery-mousewheel">jQuery MouseWheel</a> plugin (optional)</li>
+			<li><a href="http://fontawesome.io">FontAwesome</a> (for the OK/Cancel icons)</li>
+			<li>A fairly modern web browser (Firefox, Chrome or Opera suggested. It should work on IE8+, but please stop supporting that crap)</li>
+			<li>A valid HTML 5 DOCTYPE (strongly recommended)</li>
+		</ul>
+		<!--  -->
+		<h2>Licensing</h2>
+		<p>This software is released under the MIT license.</p>
+		<p>Copyright &copy; 2014 biohzrdmx</p>
+		<p>Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:</p>
+		<p>The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.</p>
+		<p>THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</p>
+		<h3>Contributing</h3>
+		<p>Fork the repo, add an interesting feature or fix a bug and send a pull request.</p>
+		<h3>Troubleshooting</h3>
+		<p>As was said earlier, this works on Chrome, Firefox and Opera. IE8+ should work too, but we aren't officially supporting it (maybe IE10, but it's still a buggy, crappy browser; please let them die alone).</p>
+		<p>Safari shouldn't have any problem, after all it's just another webkit flavor.</p>
+		<!--  -->
+		<h2>Credits</h2>
+		<p><strong>Lead coder:</strong> biohzrdmx (<a href="https://github.com/biohzrdmx/">github.com/biohzrdmx</a>)</p>
+		<br><br>
+	</div>
+	<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.8.0/jquery-1.8.0.min.js"></script>
+	<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.1.1/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.11/jquery.mousewheel.min.js"></script>
+	<script type="text/javascript" src="js/jquery.dateselect.js"></script>
+	<script type="text/javascript">
+		jQuery(document).ready(function($) {
+			$('.btn-date').on('click', function(e) {
+				e.preventDefault();
+				$.dateSelect.show({
+					element: 'input[name="date2"]'
+				});
+			});
+		});
+	</script>
+</body>
+</html>
