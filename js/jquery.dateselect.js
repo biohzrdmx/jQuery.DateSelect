@@ -38,6 +38,18 @@
 				'</div>'
 		},
 		defaults: {
+			formatDate: function(date) {
+				var formatted = $.dateSelect.pad(date.getDate(), 2) + '/' + $.dateSelect.pad(date.getMonth() + 1, 2) + '/' + date.getFullYear();
+				return formatted;
+			},
+			parseDate: function(string) {
+				var date = new Date();
+				var parts = string.match(/(\d{1,2})\/(\d{1,2})\/(\d{4})/);
+				if (parts && parts.length == 4) {
+					date = new Date(parts[3], parts[2] - 1, parts[1]);
+				}
+				return date;
+			},
 			container: 'body',
 			element: null,
 			date: new Date().toDateString(),
@@ -83,10 +95,7 @@
 				if ( typeof opts.element == 'string' ) {
 					opts.element = $(opts.element);
 				}
-				var parts = opts.element.val().match(/(\d{1,2})\/(\d{1,2})\/(\d{4})/);
-				if ( parts && parts.length == 4 ) {
-					date = new Date( parts[3], parts[2] - 1, parts[1] );
-				}
+				date = opts.parseDate(opts.element.val());
 			}
 			// Update current selection
 			obj.update(markup, date, opts);
@@ -123,7 +132,7 @@
 			});
 			markup.on('click', '.btn-ok', function(e) {
 				e.preventDefault();
-				var formatted = obj.pad(date.getDate(), 2) + '/' + obj.pad(date.getMonth() + 1, 2) + '/' + date.getFullYear();
+				var formatted = opts.formatDate(date);
 				$(opts.element).val(formatted);
 				$(opts.element).trigger("change");
 				obj.hide();
