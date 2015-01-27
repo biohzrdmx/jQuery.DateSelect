@@ -125,6 +125,7 @@
 				e.preventDefault();
 				var formatted = obj.pad(date.getDate(), 2) + '/' + obj.pad(date.getMonth() + 1, 2) + '/' + date.getFullYear();
 				$(opts.element).val(formatted);
+				$(opts.element).trigger("change");
 				obj.hide();
 			});
 			markup.on('click', '.btn-cancel', function(e) {
