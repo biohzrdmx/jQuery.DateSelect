@@ -19,7 +19,7 @@ This awesome plugin has two operation modes: automatic or manual.
 
 ###Automatic mode
 
-In automatic mode you'll just have to add a `data-*` attribute and the plugin will do all thee work (but for this to work, you must have also a valid HTML 5 DOCTYPE).
+In automatic mode you'll just have to add a `data-*` attribute and the plugin will do all the work (but for this to work, you must have also a valid HTML 5 DOCTYPE).
 
 If you can't (or don't want to) add a DOCTYPE you can still use the good old `$('#input').dateSelect()` to bind your input fields.
 
