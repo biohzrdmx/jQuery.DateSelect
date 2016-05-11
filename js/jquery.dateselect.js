@@ -15,19 +15,25 @@
 						'<span class="tip"></span>' +
 						'<div class="select day">' +
 							'<a href="#" class="btn-arrow btn-up"><i class="icon icon-up"></i></a>' +
-							'<span class="num">01</span>' +
-							'<span class="text">Thursday</span>' +
+							'<div>' +
+								'<span class="num">01</span>' +
+								'<span class="text">Thursday</span>' +
+							'</div>' +
 							'<a href="#" class="btn-arrow btn-down"><i class="icon icon-down"></i></a>' +
 						'</div>' +
 						'<div class="select month">' +
 							'<a href="#" class="btn-arrow btn-up"><i class="icon icon-up"></i></a>' +
-							'<span class="num">01</span>' +
-							'<span class="text">September</span>' +
+							'<div>' +
+								'<span class="num">01</span>' +
+								'<span class="text">September</span>' +
+							'</div>' +
 							'<a href="#" class="btn-arrow btn-down"><i class="icon icon-down"></i></a>' +
 						'</div>' +
 						'<div class="select year">' +
 							'<a href="#" class="btn-arrow btn-up"><i class="icon icon-up"></i></a>' +
-							'<span class="num">2014</span>' +
+							'<div>' +
+								'<span class="num">2014</span>' +
+							'</div>' +
 							'<a href="#" class="btn-arrow btn-down"><i class="icon icon-down"></i></a>' +
 						'</div>' +
 						'<div class="buttons">' +

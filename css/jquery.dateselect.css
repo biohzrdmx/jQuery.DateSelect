@@ -71,6 +71,15 @@
 	margin-right: 0;
 }
 
+.date-select .select > div {
+
+	position: absolute;
+	left: 0;
+	top: 20px;
+	text-align: center;
+	width: 100%;
+}
+
 .date-select .select span {
 
 	display: block;
@@ -80,19 +89,15 @@
 .date-select .select span.num {
 
 	font-size: 34px;
-	position: absolute;
-	left: 0;
-	bottom: 28px;
 	color: #555;
+	line-height: 45px;
 }
 
 .date-select .select span.text {
 
 	font-size: 12px;
 	text-transform: uppercase;
-	position: absolute;
-	left: 0;
-	bottom: 18px;
+	line-height: 15px;
 }
 
 .date-select .select:hover {
