@@ -83,8 +83,8 @@
 				curMonth = date.getMonth();
 				curYear = date.getFullYear();
 			//
-			dayNum.text( curDay );
-			monthNum.text( curMonth + 1 );
+			dayNum.text( this.pad(curDay, 2) );
+			monthNum.text( this.pad(curMonth + 1, 2) );
 			yearNum.text( curYear );
 			dayText.text( opts.strings.days[curWeekday] );
 			monthText.text( opts.strings.months[curMonth] );
