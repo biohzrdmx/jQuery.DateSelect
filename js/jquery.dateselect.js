@@ -56,6 +56,14 @@
 				}
 				return date;
 			},
+			callbacks: {
+				onShow: function(widget) {
+					// Do nothing
+				},
+				onHide: function(widget) {
+					// Do nothing
+				}
+			},
 			container: 'body',
 			element: null,
 			date: new Date().toDateString(),
@@ -181,15 +189,25 @@
 				});
 			}
 			// Show
-			markup.fadeIn(150);
+			markup.data('opts', opts);
+			markup.fadeIn(150, function() {
+				opts.callbacks.onShow(markup);
+			});
 		},
 		hide: function(force) {
 			var force = force || false,
-				el = $('.date-select');
-			if (force) {
-				el.remove();
-			} else {
-				el.fadeOut(150, el.remove);
+				el = $('.date-select'),
+				opts = el.data('opts' || {});
+			if (el.length) {
+				if (force) {
+					opts.callbacks.onHide(el);
+					el.remove();
+				} else {
+					el.fadeOut(150, function() {
+						opts.callbacks.onHide(el);
+						el.remove();
+					});
+				}
 			}
 		}
 	};
