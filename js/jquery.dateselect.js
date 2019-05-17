@@ -86,9 +86,9 @@
 				yearNum = year.find('.num'),
 				dayText = day.find('.text'),
 				monthText = month.find('.text'),
-				curDay = date.getDate();
-				curWeekday = date.getDay();
-				curMonth = date.getMonth();
+				curDay = date.getDate(),
+				curWeekday = date.getDay(),
+				curMonth = date.getMonth(),
 				curYear = date.getFullYear();
 			//
 			dayNum.text( curDay );
