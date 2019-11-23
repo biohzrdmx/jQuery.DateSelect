@@ -196,6 +196,7 @@
 	line-height: 40px;
 	font-size: 18px;
 	float: left;
+	text-decoration: none;
 }
 
 .date-select .buttons a:hover {

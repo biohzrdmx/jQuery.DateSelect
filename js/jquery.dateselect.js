@@ -37,8 +37,8 @@
 							'<a href="#" class="btn-arrow btn-down"><i class="icon icon-down"></i></a>' +
 						'</div>' +
 						'<div class="buttons">' +
-							'<a href="#" class="btn-cancel"><i class="fa fa-times"></i></a>' +
-							'<a href="#" class="btn-ok"><i class="fa fa-check"></i></a>' +
+							'<a href="#" class="btn-cancel">Cancel</a>' +
+							'<a href="#" class="btn-ok">OK</a>' +
 						'</div>' +
 					'</div>' +
 				'</div>'

@@ -69,7 +69,6 @@ Just include the [jQuery MouseWheel](https://github.com/brandonaaron/jquery-mous
 
  - [jQuery](http://jquery.com/) 1.8+
  - [jQuery MouseWheel](https://github.com/brandonaaron/jquery-mousewheel) plugin (optional)
- - [FontAwesome](http://fontawesome.io) (for the OK/Cancel icons)
  - A fairly modern web browser (Firefox, Chrome or Opera suggested. It should work on IE8+, but please stop supporting that crap)
  - A valid HTML 5 DOCTYPE (strongly recommended)
 
